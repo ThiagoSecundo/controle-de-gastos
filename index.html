@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Gastos</title>
+    <style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  body {
+    background: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  main {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #4a148c;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+
+  input, select, button {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+  }
+
+  input:focus, select:focus {
+    outline: none;
+    border-color: #4a148c;
+    box-shadow: 0 0 0 2px #e1bee7;
+  }
+
+  button {
+    background-color: #4a148c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background-color: #6a1b9a;
+  }
+
+  p {
+    font-size: 1.1em;
+    margin: 8px 0;
+    padding: 10px;
+    border-left: 5px solid #4a148c;
+    background-color: #f8f8f8;
+    border-radius: 6px;
+  }
+
+  @media (max-width: 500px) {
+    main {
+      padding: 20px 15px;
+    }
+
+    input, select, button {
+      font-size: 0.95em;
+    }
+
+    p {
+      font-size: 1em;
+    }
+  }
+</style>
+
+</head>
+<body>
+    <main>
+        <h1>Controle de Gastos</h1>
+        <form> 
+            <input id="valor" type="number" placeholder="digite o valor do gasto">
+            <select id="categoria">
+                <option>Alimentação</option>  
+                <option>Transporte</option> 
+                <option>Lazer</option>
+                <option>Outros</option>       
+            </select>
+            <button type="button">Adicionar</button>
+        </form>
+        <p id="Alimentação">Alimentação: R$:0,00</p>
+        <p id="Transporte">Transporte: R$:0,00</p>
+        <p id="Lazer">Lazer: R$:0,00</p>
+        <p id="Outros">Outros: R$:0,00</p>
+        <p id="Total">Total: R$:0,00</p>
+    </main>
+        <script src="script.js"></script>
+
+</body>
+</html>
